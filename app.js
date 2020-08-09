@@ -71,9 +71,9 @@ app.get("/",function(req,res){
 	
 })
 
-app.get("/Camp",function(req,res){
+app.get("/Camp",async function(req,res){
 	//console.log(req.user);
-	Campgrounds.find({},function(err,allcamps){
+	await Campgrounds.find({},function(err,allcamps){
 		if(err)
 			console.log(err);
 		else
