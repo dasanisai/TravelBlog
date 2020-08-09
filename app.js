@@ -20,7 +20,7 @@ var mongoose =require("mongoose"),
 //   client.close();
 // });
 
-mongoose.connect(process.env.MOGODB_URI || "mongodb://localhost:27017/yelp_camp",{useNewUrlParser:true,useUnifiedTopology:true});
+mongoose.connect( "mongodb+srv://dasanisai:bobby@123@cluster0-rmnaj.mongodb.net/TravelBlog?retryWrites=true&w=majority",{useNewUrlParser:true,useUnifiedTopology:true});
 var Campgrounds=require("./models/SeedCampground");
 var Comments=require("./models/SeedComment");
 
