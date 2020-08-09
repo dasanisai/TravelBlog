@@ -8,7 +8,9 @@ var mongoose =require("mongoose"),
 	passportlocal=require("passport-local"),
 	passportmongoose=require("passport-local-mongoose"),
 	methodOverride=require("method-override");
-mongoose.connect("mongodb://localhost:27017/yelp_camp",{useNewUrlParser:true,useUnifiedTopology:true});
+//mongodb://localhost:27017/yelp_camp
+//mongodb+srv://dasanisai:bobby@123@cluster0-rmnaj.mongodb.net/<dbname>?retryWrites=true&w=majority
+mongoose.connect("mongodb+srv://dasanisai:bobby@123@cluster0-rmnaj.mongodb.net/TravelBlog?retryWrites=true&w=majority",{useNewUrlParser:true,useUnifiedTopology:true});
 var Campgrounds=require("./models/SeedCampground");
 var Comments=require("./models/SeedComment");
 
