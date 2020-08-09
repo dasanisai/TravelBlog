@@ -1,0 +1,46 @@
+<%- include ('../partials/header')%>
+
+<div class="container-fluid">
+
+<header class="jumbotron mt-2">
+<div class="container ">
+	
+<h1>Welcome to Travelling Blog</h1>
+	<p>
+	    Know more about amazing places on Earth.
+	</p>
+	<p>
+		
+		<a class="btn btn-primary btn-large" href="/Camp/new">add New Camp </a>
+	</p>
+	
+	
+	</div>
+</header>
+
+	<div class="row text-center">
+		
+			<% camp.forEach(function(c){%>
+		<div class="col-md-3 col-sm-6" style="display:flex; flex-wrap:wrap;">
+			<figure class="figure">
+				
+				<img src= "<%=c.image %>" class="img-thumbnail figure-img" >
+				<figcaption class="figure-caption">
+					<h4>
+						<%= c.name%>
+					</h4>
+					<p>
+						<a href="/Camp/<%=c._id%>" class="btn btn-primary" > More Info</a>
+					</p>
+				</figcaption>
+			</figure>
+		</div>
+		
+
+			<%})%>
+		
+	</div>
+<%- include ('../partials/footer')%>
+	
+</div>
+

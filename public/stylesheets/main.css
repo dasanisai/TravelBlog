@@ -1,0 +1,12 @@
+
+.img-thumbnail{
+	width:100%;
+	padding:0;
+}
+
+.thumbnail .caption-fill{
+	padding:9px;
+}
+.form-delete{
+	display:inline;
+}
