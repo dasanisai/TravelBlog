@@ -10,7 +10,17 @@ var mongoose =require("mongoose"),
 	methodOverride=require("method-override");
 //mongodb://localhost:27017/yelp_camp
 //mongodb+srv://dasanisai:bobby@123@cluster0-rmnaj.mongodb.net/<dbname>?retryWrites=true&w=majority
-mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser:true,useUnifiedTopology:true});
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://dasanisai:bobby@123@cluster0-rmnaj.mongodb.net/TravelBlog?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
+//mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser:true,useUnifiedTopology:true});
 var Campgrounds=require("./models/SeedCampground");
 var Comments=require("./models/SeedComment");
 
