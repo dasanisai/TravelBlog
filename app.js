@@ -20,7 +20,7 @@ var mongoose =require("mongoose"),
 //   client.close();
 // });
 
-mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser:true,useUnifiedTopology:true});
+mongoose.connect(process.env.MOGODB_URI || "mongodb://localhost:27017/yelp_camp",{useNewUrlParser:true,useUnifiedTopology:true});
 var Campgrounds=require("./models/SeedCampground");
 var Comments=require("./models/SeedComment");
 
