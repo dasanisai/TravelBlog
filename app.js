@@ -10,7 +10,7 @@ var mongoose =require("mongoose"),
 	methodOverride=require("method-override");
 //mongodb://localhost:27017/yelp_camp
 //mongodb+srv://dasanisai:bobby@123@cluster0-rmnaj.mongodb.net/<dbname>?retryWrites=true&w=majority
-mongoose.connect("process.env.MONGODB_URI",{useNewUrlParser:true,useUnifiedTopology:true});
+mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser:true,useUnifiedTopology:true});
 var Campgrounds=require("./models/SeedCampground");
 var Comments=require("./models/SeedComment");
 
